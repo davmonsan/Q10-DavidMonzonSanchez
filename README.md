@@ -7,9 +7,6 @@ Aplicación Angular que consume una API REST externa mediante una petición GET.
 - Observables y subscribe
 - Paginación y maquetación horizontal
 
-Ruta del proyecto:
-`/rick-morty-api`
-
 ---
 
 ## Ejercicio 2 – POST a JSONPlaceholder
@@ -20,5 +17,3 @@ Aplicación Angular que simula el envío de datos a un servidor mediante POST.
 - Formulario
 - Muestra de la respuesta del servidor
 
-Ruta del proyecto:
-`/ejercicio2-post`
