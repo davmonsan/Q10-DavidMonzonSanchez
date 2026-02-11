@@ -1,17 +1,15 @@
 <h1>EJERCICIO 1 – Rick & Morty</h1>
 
 <button (click)="anterior()">⬅</button>
-Página {{page()}} / {{totalPages()}}
+Página {{page}} / {{totalPages}}
 <button (click)="siguiente()">➡</button>
 
 <div class="characters">
-@for (c of characters(); track c.id){
-  <div class="card">
+  <div *ngFor="let c of characters" class="card">
     <img [src]="c.image">
     <h3>{{c.name}}</h3>
     <p>{{c.species}} - {{c.status}}</p>
   </div>
-}
 </div>
 
 <hr>
@@ -21,14 +19,17 @@ Página {{page()}} / {{totalPages()}}
 <form (ngSubmit)="enviarPost()">
   <input [(ngModel)]="title" name="title" placeholder="Título">
   <br><br>
+
   <textarea [(ngModel)]="body" name="body" placeholder="Contenido"></textarea>
   <br><br>
+
   <input type="number" [(ngModel)]="userId" name="userId">
   <br><br>
+
   <button type="submit">Enviar</button>
 </form>
 
-@if(response()){
+<div *ngIf="response">
   <p><b>Post creado correctamente</b></p>
-  <p>ID: {{response()?.id}}</p>
-}
+  <p>ID: {{response.id}}</p>
+</div>
